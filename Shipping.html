@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="assets/IconSecretLab.png" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+<div class="papa-main borrar" id="papa-shipment">
+
+    <header>
+      <div class="papa-header-form">
+        <section class="point-zone-header">
+          <p class="profile-text">Profile</p>
+
+          <div class="point-black"></div>
+
+          <div class="line"></div>
+
+          <p class="adress-text">Adress</p>
+          <div class="point-white"></div>
+
+          <div class="line"></div>
+
+          <p class="shipp-text">Shipping</p>
+          <div class="point-white"></div>
+
+          <div class="line"></div>
+
+          <p class="finish-text">Finish</p>
+          <div class="point-white"></div>
+        </section>
+      </div>
+    </header>
+    <!---- FORMULARIO3----- -->
+
+    <form>
+      <h2>Shipping</h2>
+      <h4>Shipping type</h4>
+
+      <div>
+        <div class="choose" id="shipment">
+          <input type="radio" name="ship" value="free" />
+          <label for="">Free shipment (72H) ( no extra cost )</label>
+        </div>
+        <div class="choose" id="shipment">
+          <input type="radio" name="ship" value="extra" />
+          <label for="">Extra shipping (48h) ( +5 € )</label>
+        </div>
+        <div class="choose" id="shipment" value="premium">
+          <input type="radio" name="ship" />
+          <label for="">Premium (24h) ( + 10€ )</label>
+        </div>
+      </div>
+
+      <section id="ship-info">
+        <section class="min-date">
+          <p id="dateOne"></p>
+        </section>
+
+        <section class="max-date">
+          <p id="dateTwo"></p>
+        </section>
+      </section>
+
+      <div id="press-appear">
+        <input type="checkbox" id="checkgift" />
+        <label for="checkgifts">Is it a gift?</label>
+      </div>
+
+      <div id="appear" class="aparecer-gift bl">
+        <label for="gift"><h2>Comment</h2></label>
+        <textarea
+          cols="30"
+          rows="10"
+          id="gift"
+          placeholder="Gift message"
+          name="gift"
+          maxlength="200"
+        ></textarea>
+        <label for="wrapper">Gift wrapper image</label>
+        <input
+          class="input-form"
+          placeholder="Select image"
+          type="file"
+          id="wrapper"
+          name="wrapper"
+          accept=".jpg, .jpeg, .png"
+        />
+      </div>
+
+      <div class="btn-profile">
+        <button class="clearbutton">Clear</button>
+        <button class="submitbutton">Next</button>
+      </div>
+    </form>
+
+</div>
+
+  </body>
+</html>

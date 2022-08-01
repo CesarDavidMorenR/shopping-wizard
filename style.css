@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.papa-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p.precio1 {
+  color: red;
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+p.precio2 {
+  color: #6e6e6e;
+  text-decoration: line-through;
+}
+
+.clickimage {
+  transition: all 400ms;
+}
+.clickimage:hover {
+  transform: scale(1.15);
+}
+
+#shipment {
+  display: flex;
+}
+.enlarge {
+  width: 60%;
+  height: auto;
+  transition: width 0.5s ease;
+}
+
+.precio-producto {
+  width: 800px;
+  margin-left: 100px;
+}
+
+.columna-fotos {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.clickimage {
+  width: 100px;
+}
+
+.pack1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 200px;
+}
+
+.precio-oferta {
+  display: flex;
+  margin: 20px;
+}
+
+#size-chair {
+  background-color: #c7e2e0;
+  color: black;
+  height: 40px;
+  width: 80%;
+  border: none;
+  border-radius: 6px;
+}
+
+.add-button {
+  height: 40px;
+  width: 80%;
+  background-color: #e3174b;
+  color: white;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+.add-button:hover {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
+.btn-car {
+  height: 30px;
+  width: 30px;
+}
+
+/* boton de colores */
+#pink {
+  background-color: #da67a4;
+}
+#blue {
+  background-color: #5dd0df;
+}
+#gray {
+  background-color: gray;
+}
+#black {
+  background-color: black;
+}
+.boton-color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.imagen-tejido {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* boton de leather */
+
+#lea-black {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#lea-yellow {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#lea-blue {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#lea-red {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#lea-white {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+
+/* ---NAVBAR---- */
+
+.navbar {
+  background-color: whitesmoke;
+  top: 0;
+}
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.nav-item {
+  font-size: 10px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nav-item img {
+  height: 30px;
+  width: 80px;
+  float: left;
+}
+
+.logo {
+  transform: translateX(-250px);
+}
+
+.nav-link img {
+  height: 18px;
+  width: 20px;
+  transform: translateX(150px);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+.nav-link:hover {
+  cursor: pointer;
+  color: #0ad4ed;
+}
+
+.main-div {
+  display: flex;
+}
+
+/* --------imagen silla--------------------- */
+.silla1 {
+  transition: all 300ms;
+}
+.silla1:hover {
+  transform: scale(1.65);
+}
+
+.silla1 {
+  width: 275px;
+  height: 450px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  display: block;
+}
+
+/* ------------------PROFILE------------------ */
+/* -------------------CLEAR PROFILE----------------- */
+
+/* .bodyProfile {
+	background-color: #1E1E1E;
+	color: #edf2e3;
+	height: 100vh;
+	display: flex;
+	place-items: center;
+  flex-direction: column;
+}   */
+
+/* Main button styles */
+.btn {
+  background-color: transparent;
+  border-radius: 1.5em;
+  display: block;
+  position: relative;
+  width: 7.5em;
+  height: 3em;
+  transition: width 0.3s ease-in-out;
+}
+.btn:not(:disabled):active {
+  transform: translateY(0.1em);
+}
+.btn__text {
+  background-color: red;
+  border-radius: inherit;
+  color: hsl(0, 28%, 95%);
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  transition: background-color 0.15s linear, color 0.15s 0.3s ease-in-out;
+  width: 100%;
+}
+.btn:not(:disabled):focus .btn__text,
+.btn:not(:disabled):hover .btn__text {
+  background-color: black;
+}
+.btn__progress {
+  background-color: transparent;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 3em;
+  visibility: hidden;
+}
+.btn__progress-track {
+  border: 12px;
+  stroke: red;
+  stroke-width: 24;
+}
+.btn__progress-fill {
+  stroke: #00ffcc;
+  stroke-dashoffset: 125.66;
+}
+.btn__progress-check {
+  stroke: hsl(0, 100%, 98%);
+  stroke-dashoffset: 34;
+}
+
+/* Both states */
+.btn--running,
+.btn--done {
+  outline: none;
+  pointer-events: none;
+  width: 3em;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.btn--running .btn__text,
+.btn--done .btn__text {
+  color: transparent;
+  transition: background-color 0.3s ease-in-out, visibility 0.3s steps(1);
+}
+.btn--running .btn__progress,
+.btn--done .btn__progress {
+  visibility: visible;
+}
+
+/* Running state */
+.btn--running .btn__text {
+  background-color: #6666cc;
+  visibility: hidden;
+}
+.btn--running .btn__progress {
+  transition: visibility 0.3s 0.3s steps(1, start);
+}
+.btn--running .btn__progress-track {
+  r: 20px;
+  stroke-width: 8;
+  transition: r 0.3s 0.3s ease-in-out, stroke-width 0.3s 0.3s ease-in-out;
+}
+.btn--running .btn__progress-fill {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s 0.6s linear;
+}
+
+/* Done state */
+.btn--done .btn__progress-track {
+  stroke: #00ffcc;
+  transition: r 0.3s ease-in-out, stroke-width 0.3s ease-in-out;
+}
+.btn--done .btn__progress-check {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s 0.3s ease-out;
+}
+/* --------------SUBMIT BUTTON--------------- */
+
+/* :root {
+	--hue: 223;
+	--bg1: hsl(var(--hue),10%,90%);
+	--bg2: hsl(var(--hue),10%,80%);
+	--fg1: hsl(var(--hue),10%,10%);
+	--fg2: hsl(var(--hue),10%,20%);
+	--primary1: hsl(var(--hue),90%,55%);
+	--primary2: hsl(var(--hue),90%,45%);
+	font-size: calc(20px + (40 - 20) * (100vw - 320px) / (1280 - 320));
+} */
+
+/* FORMULARIO */
+
+form {
+  width: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  position: relative;
+}
+/* .bodyProfile {
+	background-color: whitesmoke;
+	color: black;
+	height: 100vh;
+	display: flex;
+	place-items: center;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+} */
+h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+}
+
+h4,
+.choose {
+  margin: 10px 0;
+  width: 180px;
+  color: gray;
+}
+.input-form {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: whitesmoke;
+}
+.btn-profile {
+  padding: 8px 12px;
+  margin: 8px;
+  margin-left: 160px;
+}
+/* button:hover{
+  background:#23d5ab;
+  color:#fff;
+} */
+.submitbutton {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  border-radius: 50px;
+  color: white;
+  width: 80px;
+  height: 40px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.clearbutton {
+  background: #ee7752;
+  border-radius: 50px;
+  color: white;
+  width: 80px;
+  height: 40px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* ---------------------footer--------------------- */
+
+.footer-product {
+  background-color: #d4d4d4;
+  text-align: center;
+  flex-direction: row;
+}
+.footer-top {
+  margin-bottom: 10px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footertext {
+  flex-direction: row;
+  justify-content: space-around;
+  color: #544f4f;
+  padding: 40px;
+  font-size: 8px;
+}
+
+.footer-tst {
+  display: flex;
+  margin: 0 auto;
+  width: 700px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.button-contact {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite; /* NO FUNCIONA */
+  border-radius: 6px;
+  color: white;
+  width: 250px;
+  height: 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.input-contact {
+  width: 250px;
+  height: 20px;
+  /* appearance: none;
+  outline: none; */
+  border: none;
+  border-radius: 6px;
+}
+/* 
+#username{
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+} */
+
+/* Begin HEADER Profile FORM -- DAVID  */
+
+.papa-header-form {
+  background-color: #ededed;
+  width: 100%;
+  height: 90px;
+}
+
+.point-zone-header {
+  width: 90%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  transform: translateY(15px);
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile-text {
+  position: absolute;
+  top: -12px;
+}
+
+.adress-text {
+  position: absolute;
+  top: -15px;
+  left: 359px;
+}
+
+.shipp-text {
+  position: absolute;
+  top: -14px;
+  left: 730px;
+}
+
+.finish-text {
+  position: absolute;
+  top: -12px;
+  left: 1110px;
+}
+
+.point-black {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.firts-point {
+  width: 40px;
+  height: 40px;
+}
+
+.line {
+  width: 344px;
+  height: 10px;
+  background-color: gray;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.point-white {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* End HEADER Profile FORM -- DAVID  */
+
+/* Begin FOOTER Profile FORM -- DAVID  */
+
+.footer-profile {
+  background-color: lightgray;
+  height: 90px;
+}
+
+.padre-de-btns {
+  margin-left: 500px;
+}
+
+/* End FOOTER Profile FORM -- DAVID  */
+
+/* .borrar, #appear{
+  display: none;
+}flex-direction: column;shipment
+ */
+
+.borrar {
+  display: none;
+}
+
+/* .aparecer-gift{
+ display: none;
+}
+ */
+.bl {
+  display: none;
+}
