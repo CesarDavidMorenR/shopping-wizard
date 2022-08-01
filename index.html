@@ -94,7 +94,7 @@
                 <option value="Select your size">Select your size</option>
                 <option id="small" value="small" class="size-pmg">S</option>
                 <option id="medium" value="medium" class="size-pmg">M</option>
-                <option id="xl" value="extra large"class="size-pmg">XL</option>
+                <option id="xl" value="xl" class="size-pmg">XL</option>
               </select>
             </div>
             <div class="selector-sizes">
@@ -402,23 +402,28 @@
       <h4>Shipping type</h4>
 
       <div>
-        <div class="choose" id="shipment">
-          <input type="radio" name="ship" value="free" />
-          <label for="">Free shipment (72H) ( no extra cost )</label>
+        <div class="shipment" id="shipment1">
+          <input type="radio" checked name="shipping">
+          <label>Free shipment (72H) ( no extra cost )</label>
         </div>
-        <div class="choose" id="shipment">
-          <input type="radio" name="ship" value="extra" />
-          <label for="">Extra shipping (48h) ( +5 € )</label>
+        
+        <p id="here"></p>
+        <div class="shipment" id="shipment-two">
+          <input type="radio" name="shipping">
+          <label>Extra shipping (48h) ( +5 € )</label>
         </div>
-        <div class="choose" id="shipment" value="premium">
-          <input type="radio" name="ship" />
-          <label for="">Premium (24h) ( + 10€ )</label>
+        <p id="here-two"></p>
+        <div class="shipment" id="shipment-three">
+          <input type="radio" name="shipping">
+          <label>Premium (24h) ( + 10€ )</label>
         </div>
+        <p id="here-th"></p>
+        <p id="dateOne"></p>
       </div>
 
       <section id="ship-info">
         <section class="min-date">
-          <p id="dateOne"></p>
+          
         </section>
 
         <section class="max-date">

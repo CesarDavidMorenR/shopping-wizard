@@ -1,18 +1,71 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // premium shipping
+  let date = new Date();
+  let todayPlus24h = new Date(date.setDate(date.getDate() + 1))
+    .toString()
+    .slice(4, 21);
+  let todayPlus30h = new Date(date.setTime(date.getTime() + 6 * 60 * 60 * 1000))
+    .toString()
+    .slice(4, 21);
+  // extra shipping
+  date = new Date();
+  let todayPlus48h = new Date(date.setDate(date.getDate() + 2))
+    .toString()
+    .slice(4, 21);
+  let todayPlus54h = new Date(date.setTime(date.getTime() + 6 * 60 * 60 * 1000))
+    .toString()
+    .slice(4, 21);
+  // free shipping
+  date = new Date();
+  let todayPlus72h = new Date(date.setDate(date.getDate() + 3))
+    .toString()
+    .slice(4, 21);
+  let todayPlus78h = new Date(date.setTime(date.getTime() + 6 * 60 * 60 * 1000))
+    .toString()
+    .slice(4, 21);
+  
+  let freeShipping = document.getElementById("shipment1");
+  let extraShipping = document.getElementById("shipment-two");
+  let premiumShipping = document.getElementById("shipment-three");
+   let deliveryExcepted = document.getElementById("dateOne");
+  
+  freeShipping.addEventListener("click", freeF);
+  function freeF() {
+    deliveryExcepted.innerHTML = todayPlus72h + " and " + todayPlus78h + ".";
+    personCar.shipping = noCost.innerHTML;
+  }
+
+  extraShipping.addEventListener("click", extraF);
+  function extraF() {
+    deliveryExcepted.innerHTML = todayPlus48h + " and " + todayPlus54h + ".";
+    personCar.shipping = extraCost.innerHTML;
+  }
+
+  premiumShipping.addEventListener("click", premiumF);
+  function premiumF() {
+    deliveryExcepted.innerHTML = todayPlus24h + " and " + todayPlus30h + ".";
+    personCar.shipping = premiumCost.innerHTML;
+  }
+});
+
+/* Select shipen with onCLick Div */
+
+document.addEventListener("DOMContentLoaded", () => {
   function cambiar() {
     document.getElementById("here").innerHTML =
       "Estimated delivery date: FREEE";
     document.getElementById("here-two").innerHTML = "";
     document.getElementById("here-th").innerHTML = "";
   }
-
   document.getElementById("shipment1").onclick = function () {
     cambiar();
   };
 
   function change() {
+    document.getElementById("here").innerHTML = "";
     document.getElementById("here-two").innerHTML =
       "Estimated delivery : EXTRAAA";
+    document.getElementById("here-th").innerHTML = "";
   }
 
   document.getElementById("shipment-two").onclick = function () {
@@ -20,10 +73,11 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   function nueva() {
+    document.getElementById("here").innerHTML = "";
+    document.getElementById("here-two").innerHTML = "";
     document.getElementById("here-th").innerHTML =
       "Estimated del date: PREMIUM";
   }
-
   document.getElementById("shipment-three").onclick = function () {
     nueva();
   };
@@ -47,21 +101,19 @@ window.addEventListener("DOMContentLoaded", () => {
         precio1.textContent = "2000";
         break;
 
-      case "dollar":
+      case "medium":
         basicPrice.textContent = "$0";
         proPrice.textContent = "$25";
         premiumPrice.textContent = "$60";
 
         break;
 
-      case "libra":
+      case "extra-large":
         basicPrice.textContent = "£0";
         proPrice.textContent = "£" + Math.ceil(libraApi * (25 * dollarApi));
         premiumPrice.textContent = "£" + Math.ceil(libraApi * (60 * dollarApi));
     }
   });
-
-  
 });
 
 /* Check Password */
@@ -129,7 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* Select Shipment */
+/* Select Shipment with radio */
 
 window.addEventListener("DOMContentLoaded", () => {
   // your code
