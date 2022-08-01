@@ -1,29 +1,33 @@
-function cambiar() {
-  document.getElementById("here").innerHTML = "Estimated delivery date: FREEE";
-  document.getElementById("here-two").innerHTML = "";
-  document.getElementById("here-th").innerHTML = "";
-}
+window.addEventListener("DOMContentLoaded", () => {
+  function cambiar() {
+    document.getElementById("here").innerHTML =
+      "Estimated delivery date: FREEE";
+    document.getElementById("here-two").innerHTML = "";
+    document.getElementById("here-th").innerHTML = "";
+  }
 
-document.getElementById("shipment1").onclick = function () {
-  cambiar();
-};
+  document.getElementById("shipment1").onclick = function () {
+    cambiar();
+  };
 
-function change() {
-  document.getElementById("here-two").innerHTML =
-    "Estimated delivery : EXTRAAA";
-}
+  function change() {
+    document.getElementById("here-two").innerHTML =
+      "Estimated delivery : EXTRAAA";
+  }
 
-document.getElementById("shipment-two").onclick = function () {
-  change();
-};
+  document.getElementById("shipment-two").onclick = function () {
+    change();
+  };
 
-function nueva() {
-  document.getElementById("here-th").innerHTML = "Estimated del date: PREMIUM";
-}
+  function nueva() {
+    document.getElementById("here-th").innerHTML =
+      "Estimated del date: PREMIUM";
+  }
 
-document.getElementById("shipment-three").onclick = function () {
-  nueva();
-};
+  document.getElementById("shipment-three").onclick = function () {
+    nueva();
+  };
+});
 
 /* SIZE CHAIR */
 
@@ -34,12 +38,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   listaOpciones.addEventListener("input", (event) => {
     let mainImg = document.getElementById("imgchange");
+    let precio1 = document.getElementById("precio1");
 
     switch (event.target.value) {
       case "small":
         mainImg.style.width = "50%";
         mainImg.style.height = "50%";
-
+        precio1.textContent = "2000";
         break;
 
       case "dollar":
@@ -55,6 +60,8 @@ window.addEventListener("DOMContentLoaded", () => {
         premiumPrice.textContent = "£" + Math.ceil(libraApi * (60 * dollarApi));
     }
   });
+
+  
 });
 
 /* Check Password */
