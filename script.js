@@ -1,3 +1,30 @@
+function cambiar() {
+  document.getElementById("here").innerHTML = "Estimated delivery date: FREEE";
+  document.getElementById("here-two").innerHTML = "";
+  document.getElementById("here-th").innerHTML = "";
+}
+
+document.getElementById("shipment1").onclick = function () {
+  cambiar();
+};
+
+function change() {
+  document.getElementById("here-two").innerHTML =
+    "Estimated delivery : EXTRAAA";
+}
+
+document.getElementById("shipment-two").onclick = function () {
+  change();
+};
+
+function nueva() {
+  document.getElementById("here-th").innerHTML = "Estimated del date: PREMIUM";
+}
+
+document.getElementById("shipment-three").onclick = function () {
+  nueva();
+};
+
 /* SIZE CHAIR */
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -289,5 +316,4 @@ nextBtnShip.addEventListener("click", (e) => {
   papaFinish.classList.remove("borrar");
 
   e.preventDefault();
-  
 });
