@@ -1,3 +1,12 @@
+/*  */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+});
+
+
+/* Shipping Times */
+
 window.addEventListener("DOMContentLoaded", () => {
   // premium shipping
   let date = new Date();
